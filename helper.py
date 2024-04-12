@@ -31,7 +31,7 @@ def display_tracker_options():
 
 
 def _display_detected_frames(
-    conf, model, st_frame, image, is_display_tracking=None, tracker=None):
+        conf, model, st_frame, image, is_display_tracking=None, tracker=None):
     """
     Display the detected objects on a video frame using the YOLOv8 model.
 
@@ -220,5 +220,6 @@ def play_stored_video(conf, model):
                 else:
                     vid_cap.release()
                     break
+                
         except Exception as e:
             st.sidebar.error("Error loading video: " + str(e))
